@@ -1,0 +1,5 @@
+- implement authentication
+- implement wallet creation and manipulation
+- implement add credit card functionality
+- implement fundwallet 
+- implement transfer
