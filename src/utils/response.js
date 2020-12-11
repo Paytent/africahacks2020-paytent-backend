@@ -1,4 +1,7 @@
 const response = (message, data, status) => {
+	if (!data) {
+		return { message, status };
+	}
 	return {
 		message,
 		data,

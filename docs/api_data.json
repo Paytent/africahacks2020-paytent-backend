@@ -210,6 +210,42 @@
     "groupTitle": "Dashboard"
   },
   {
+    "type": "get",
+    "url": "/transaction/all/:walletId",
+    "title": "Fetch wallet transactions",
+    "name": "Fetch_wallet_transactions",
+    "group": "Transaction",
+    "parameter": {
+      "fields": {
+        "Request Headers": [
+          {
+            "group": "Request Headers",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>The authorization header, format [Bearer token]</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>Transactions fetched</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/routes/transaction.js",
+    "groupTitle": "Transaction"
+  },
+  {
     "type": "post",
     "url": "/wallet/new",
     "title": "Create a new wallet",
