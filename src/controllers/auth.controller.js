@@ -5,7 +5,9 @@ class AuthController {
 	async registerUser(req, res, next) {
 		try {
 			let token = await AuthService.registerUser(req.body);
-			res.status(200).json(response("User created", token, true));
+			res.status(200).json(
+				response("User created", { accessToken: token }, true)
+			);
 		} catch (e) {
 			next(e);
 		}
@@ -14,7 +16,9 @@ class AuthController {
 	async loginUser(req, res, next) {
 		try {
 			let token = await AuthService.loginUser(req.body);
-			res.status(200).json(response("User logged in", token, true));
+			res.status(200).json(
+				response("User logged in", { accessToken: token }, true)
+			);
 		} catch (e) {
 			next(e);
 		}

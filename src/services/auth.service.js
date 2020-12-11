@@ -32,8 +32,8 @@ class AuthService {
 			"verified",
 			"role",
 		]);
-		let accessToken = await token.generate(user);
-		return { accessToken };
+
+		return await token.generate(user);
 	}
 
 	async loginUser(user) {
@@ -54,8 +54,7 @@ class AuthService {
 			"verified",
 			"role",
 		]);
-		let accessToken = await token.generate(user);
-		return { accessToken };
+		return await token.generate(user);
 	}
 
 	async verifyOtp({ user, data }) {
